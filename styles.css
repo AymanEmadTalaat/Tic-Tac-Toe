@@ -1,0 +1,106 @@
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ddd8c7;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  height: 400px;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 5px;
+  border: 1px solid black;
+}
+
+.container > div {
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 6rem;
+  min-height: 123px;
+  height: fit-content;
+}
+
+.player-names {
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+}
+
+.players {
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.players input {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(235, 235, 235);
+}
+
+.players input:focus {
+  outline: 1px solid black;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btns button {
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 20px;
+  cursor: pointer;
+  margin-block: 2rem;
+  background-color: #5e503f;
+  color: rgb(235, 235, 235);
+}
+
+.btns button:active {
+  transform: translateY(4px);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 300px;
+    max-width: 300px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .container > div {
+    min-height: 90px;
+    font-size: 4rem;
+  }
+}
